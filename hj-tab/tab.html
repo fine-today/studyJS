@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/tab.css" />
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!--    <script src="js/plugins.js"></script>-->
+    <!--    <script src="js/layout.js"></script>-->
+    <!--    <script src="js/common.js"></script>-->
+    <!--    <script src="js/sub.js"></script>-->
+    <title>Title</title>
+  </head>
+  <body>
+    <h3>지역조직 현황</h3>
+    <p>지도에서 각각의 지역명을 누르시면 자세한 내용 확인 가능</p>
+    <div class="temp_box">
+      <div class="inner">
+        <img
+          src="/image/local_map.png"
+          alt="표시가 있는 지역명을 클릭하시면, 맵 우측에서 해당지역의 지역조직 내역을 볼 수 있습니다."
+          usemap="#image-map"
+          class="map_img"
+        />
+        <div class="map_datasets">
+          <button type="button" class="map_btn n1" data-map="1">
+            1<span>서울</span>
+          </button>
+          <button type="button" class="map_btn n2" data-map="2">
+            2<span>인천</span>
+          </button>
+          <button type="button" class="map_btn n3" data-map="3">
+            3<span>경기도</span>
+          </button>
+          <button type="button" class="map_btn n4" data-map="4">
+            4<span>강원도</span>
+          </button>
+          <button type="button" class="map_btn n5" data-map="5">
+            5<span>충청남도</span>
+          </button>
+          <button type="button" class="map_btn n6" data-map="6">
+            6<span>대전</span>
+          </button>
+          <button type="button" class="map_btn n7" data-map="7">
+            7<span>세종</span>
+          </button>
+          <button type="button" class="map_btn n8" data-map="8">
+            8<span>충청북도</span>
+          </button>
+          <button type="button" class="map_btn n9" data-map="9">
+            9<span>전라남도</span>
+          </button>
+          <button type="button" class="map_btn n10" data-map="10">
+            10<span>광주</span>
+          </button>
+          <button type="button" class="map_btn n11" data-map="11">
+            11<span>전라북도</span>
+          </button>
+          <button type="button" class="map_btn n12" data-map="12">
+            12<span>경상북도</span>
+          </button>
+          <button type="button" class="map_btn n13" data-map="13">
+            13<span>경상남도</span>
+          </button>
+          <button type="button" class="map_btn n14" data-map="14">
+            14<span>대구</span>
+          </button>
+          <button type="button" class="map_btn n15" data-map="15">
+            15<span>울산</span>
+          </button>
+          <button type="button" class="map_btn n16" data-map="16">
+            16<span>부산</span>
+          </button>
+          <button type="button" class="map_btn n17" data-map="17">
+            17<span>제주도</span>
+          </button>
+        </div>
+      </div>
+      <a href="#n" class="btn type3 map_btn" data-map="all">전체보기</a>
+    </div>
+
+    <div class="table_box">
+      <div class="box">
+        <table class="table responsive">
+          <caption>
+            지역조직 현황 - 서울의 기관명, 지역조직명, 설치년도, 정보 순으로
+            제공
+          </caption>
+          <colgroup>
+            <col />
+            <col />
+            <col />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">기관명</th>
+              <th scope="col">지역조직명</th>
+              <th scope="col">설치년도</th>
+              <th scope="col">정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 1 : 서울 -->
+            <tr data-index="1">
+              <td>한국기초과학지원연구원</td>
+              <td>서울센터</td>
+              <td>1992</td>
+              <td>
+                - 주소 : 서울특별시 성북구 인촌로22길 6-7 고려대학교
+                자연계캠퍼스<br />- 대표번호 : 02-6943-4165
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>한국기초과학지원연구원</td>
+              <td>서울서부센터</td>
+              <td>2014</td>
+              <td>
+                - 주소 : 서울특별시 서대문구 북아현로 150 산학협력관<br />-
+                대표번호 : 02-6908-6211<br />
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>한국과학기술정보연구원</td>
+              <td>서울분원</td>
+              <td>1969</td>
+              <td>
+                - 주소 : 서울특별시 동대문구 회기로66<br />- 대표번호 :
+                02-3299-6114
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>한국생산기술연구원</td>
+              <td>국가청정생산지원센터</td>
+              <td>1999</td>
+              <td>
+                - 주소 : 서울특별시 강남구 테헤란로 322 한신인터밸리 24 동관
+                18층<br />- 대표번호 : 02-2183-1545
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>국가보안기술연구소</td>
+              <td>정보보안기술지원센터</td>
+              <td>2010</td>
+              <td>
+                - 주소 : 서울시 강남구 역삼동 823번지 삼원타워 1006호<br />-
+                대표번호 : 042-870-2114
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>한국전기연구원</td>
+              <td>RSS(Russia Science Seoul)센터</td>
+              <td>2011</td>
+              <td>- 주소 : 서울시 마포구 성암로 330 DMC첨단산업센터</td>
+            </tr>
+            <!-- 2: 인천 -->
+            <tr data-index="2">
+              <td>한국생산기술연구원</td>
+              <td>뿌리산업기술연구소</td>
+              <td>1989</td>
+              <td>
+                - 주소 : 인천 연수구 갯벌로 156<br />- 대표번호 :
+                032-850-0114<br /> <a
+                  href="http://www.kitech.re.kr/introduction/page4-2.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+
+            <!-- 3: 경기도  -->
+            <tr data-index="3">
+              <td>한국생산기술연구원</td>
+              <td>융합생산기술연구소</td>
+              <td>2007</td>
+              <td>
+                - 주소 : 경기 안산시 상록구 항가울로 143<br />
+                - 대표번호 : 031-8040-6114<br />
+                 <a
+                  href="http://www.kitech.re.kr/introduction/page4-3.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="3">
+              <td>한국전자통신연구원</td>
+              <td>서울SW-SoC<br />융합 R&BD센터</td>
+              <td>1997</td>
+              <td>
+                <span
+                  >- 주소 : 경기도 성남시 분당구 대왕판교로 712번길22<br />(글로벌R&D센터
+                  연구동 A, 2층&3층)</span
+                ><br />- 대표번호 : 031-739-7200<br /> <a
+                  href="https://www.asic.net/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="3">
+              <td>한국건설기술연구원</td>
+              <td>화재안전연구센터</td>
+              <td>2006</td>
+              <td>
+                - 주소 : 경기도 화성시 마도면 마도로 182번길 64<br />- 대표번호
+                : 031-369-0552
+              </td>
+            </tr>
+            <tr data-index="3">
+              <td>한국전기연구원</td>
+              <td>안산분원</td>
+              <td>2007</td>
+              <td>
+                - 주소 : 경기도 안산시 상록구 항가울로 111<br />- 대표번호 :
+                031-8040-4114
+              </td>
+            </tr>
+            <tr data-index="3">
+              <td>한국전기연구원</td>
+              <td>의왕분원</td>
+              <td>1988</td>
+              <td>
+                - 주소 : 경기도 의왕시 내손순환로 138<br />- 대표번호 :
+                031-420-6114
+              </td>
+            </tr>
+
+            <!-- 4: 강원도 -->
+            <tr data-index="4">
+              <td>한국과학기술연구원</td>
+              <td>강릉분원<br />천연물연구소</td>
+              <td>2003</td>
+              <td>
+                - 주소 : 강원도 강릉시 사임당로 679(강릉과학산업단지 내)<br />-
+                대표번호 : 033-650-3400<br /> 
+                <a
+                  href="https://gn.kist.re.kr:8443/portal/main/main.do"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="4">
+              <td>한국기초과학지원연구원</td>
+              <td>춘천센터</td>
+              <td>2001</td>
+              <td>
+                - 주소 : 강원도 춘천시 강원대학길1 강원대학교 집현관<br />-
+                대표번호 : 033-250-7275
+              </td>
+            </tr>
+            <tr data-index="4">
+              <td>한국생산기술연구원</td>
+              <td>강원본부</td>
+              <td>2015</td>
+              <td>
+                - 주소 : 강원도 강릉시 과학단지로 137-41(사천면)<br />- 대표번호
+                : 033-649-4114<br /> 
+                <a
+                  href="https://gangwon.kitech.re.kr:449/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+
+            <!-- 8 : 충청북도 -->
+            <tr data-index="8">
+              <td>한국기초과학지원연구원</td>
+              <td>오창센터</td>
+              <td>2006</td>
+              <td>
+                - 주소 : 충청북도 청주시 청원구 오창읍 연구단지로 162<br />-
+                대표번호 : 043-240-5001
+              </td>
+            </tr>
+            <tr data-index="8">
+              <td>한국생명공학연구원</td>
+              <td>오창분원</td>
+              <td>2005</td>
+              <td>
+                - 주소 : 충청북도 청주시 청원구 오창읍 연구단지로 30<br />-
+                대표번호 : 043-240-6023~4<br /> 
+                <a
+                  href="https://portal.kribb.re.kr/obi"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="8">
+              <td>한국철도기술연구원</td>
+              <td>철도완성차안전시험연구시설</td>
+              <td>2019</td>
+              <td>
+                - 주소 : 충청북도 청주시 흥덕구 오송읍 정중연제로 384-1<br />-
+                대표번호 : 031-460-5000
+              </td>
+            </tr>
+
+            <!-- 9: 전남 -->
+            <tr data-index="9">
+              <td>한국한의학연구원</td>
+              <td>한약자원연구센터</td>
+              <td>2018</td>
+              <td>
+                - 주소 : 전라남도 나주시 대호동 141<br />- 대표번호 :
+                061-338-7105
+              </td>
+            </tr>
+            <tr data-index="9">
+              <td>한국항공우주연구원</td>
+              <td>나로우주센터</td>
+              <td>2009</td>
+              <td>
+                - 주소 : 전라남도 고흥군 봉래면 예내리 1<br />- 대표번호 :
+                061-830-8700
+              </td>
+            </tr>
+
+            <!-- 10 : 광주 -->
+            <tr data-index="10">
+              <td>한국기초과학지원연구원</td>
+              <td>광주센터</td>
+              <td>1992</td>
+              <td>
+                - 주소 : 광주광역시 북구 용봉로 77 전남대학교<br />- 대표번호 :
+                062-530-0890
+              </td>
+            </tr>
+            <tr data-index="10">
+              <td>한국과학기술정보연구원</td>
+              <td>호남지원</td>
+              <td>1982</td>
+              <td>
+                - 주소 : 광주광역시 광산구 하남산단8번로 177<br />- 대표번호 :
+                062-951-7111
+              </td>
+            </tr>
+            <tr data-index="10">
+              <td>한국생산기술연구원</td>
+              <td>서남지역본부</td>
+              <td>2004</td>
+              <td>
+                - 주소 : 광주 북구 첨단과기로 208번지 6번길<br />- 대표번호 :
+                062-600-6114<br /> 
+                <a
+                  href="http://www.gjk.re.kr/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="10">
+              <td>한국전자통신연구원</td>
+              <td>호남권연구센터</td>
+              <td>2001</td>
+              <td>
+                - 주소 : 광주광역시 북구 첨단과기로 176번길 11<br />- 대표번호 :
+                062-970-6500<br /><span
+                  > 
+                  <a
+                    href="https://www.etri.re.kr/kor/sub6/sub6_0101.etri?departCode=70"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+            <tr data-index="10">
+              <td>한국에너지기술연구원</td>
+              <td>광주 바이오에너지<br />연구개발센터</td>
+              <td>2017</td>
+              <td>
+                - 주소 : 광주광역시 북구 삼소로 270번길 25<br />- 대표번호 :
+                062-717-2410<br /><span
+                  > 
+                  <a
+                    href="https://www.kier.re.kr/board?menuId=MENU00787"
+                    rel="noopener noreferrer"
+                    target="blank"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+            <tr data-index="10">
+              <td>한국전기연구원</td>
+              <td>스마트그리드본부</td>
+              <td>2020</td>
+              <td>
+                - 주소 : 주소: 광주광역시 남구 도시첨단산업로 27<br />- 대표번호
+                : 062-606-7214<br /> 
+                <a
+                  href="https://www.keri.re.kr/html/kr/sub02/sub02_021101.html"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+
+            <!-- 11: 전북  -->
+            <tr data-index="11">
+              <td>한국과학기술연구원</td>
+              <td>전북분원<br />복합소재기술연구소</td>
+              <td>2008</td>
+              <td>
+                - 주소 : 전라북도 완주군 봉동읍 추동로92<br />- 대표번호 :
+                063-219-8114<br /> 
+                <a
+                  href="http://jb.kist.re.kr/portal/main/main.do"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국기초과학지원연구원</td>
+              <td>전주센터</td>
+              <td>1999</td>
+              <td>
+                - 주소 : <span
+                  >전라북도 전주시 덕진구 건지로 20 전북대학교 병원내
+                  생명과학관</span
+                ><br />- 대표번호 : 063-270-4306
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국핵융합에너지연구원</td>
+              <td>플라즈마<br />기술연구센터</td>
+              <td>2012</td>
+              <td>
+                - 주소 : 전라북도 군산시 동장산로 37<br />- 대표번호 :
+                063-440-3900<br /> <a
+                  href="http://www.plasma.re.kr/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국생명공학연구원</td>
+              <td>전북분원</td>
+              <td>2006</td>
+              <td>
+                - 주소 : 전라북도 정읍시 입신길 181<br />- 대표번호 :
+                063-570-5020<br /> <a
+                  href="https://portal.kribb.re.kr/jbi"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국원자력연구원</td>
+              <td>첨단방사선연구소</td>
+              <td>2005</td>
+              <td>
+                - 주소 : 전라북도 정읍시 금구길29<br />- 대표번호 :
+                063-570-3000<br /> <a
+                  href="https://www.kaeri.re.kr/arti/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국생산기술연구원</td>
+              <td>전북본부</td>
+              <td>2011</td>
+              <td>
+                - 주소 : 전북 전주시 덕진구 팔복로 222<br />- 대표번호 :
+                063-210-3721<br /> <a
+                  href="http://www.kitech.re.kr/introduction/page4-9.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국재료연구원</td>
+              <td>부안풍력시험동</td>
+              <td>2011</td>
+              <td>
+                - 주소 : 전라북도 부안군 하서면 신재생에너지로 10번지<br />-
+                대표번호 : 063-584-7183
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>한국에너지기술연구원</td>
+              <td>연료전지실증연구센터</td>
+              <td>2011</td>
+              <td>
+                - 주소 : 전라북도 부안군 하서면 신재생에너지로 20-41<br /> <a
+                  href="https://www.kier.re.kr/board?menuId=MENU00812"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="11">
+              <td>안전성평가연구소</td>
+              <td>전북분소</td>
+              <td>2008</td>
+              <td>
+                - 주소 : 전라북도 정읍시 백학1길 30<br />- 대표번호 :
+                063-570-8114
+              </td>
+            </tr>
+
+            <!-- 12 : 경북 -->
+
+            <tr data-index="12">
+              <td>한국원자력연구원</td>
+              <td>양성자과학연구단</td>
+              <td>2013</td>
+              <td>
+                - 주소 : 경상북도 경주시 건천읍 미래로 181 (화천리 226-1)<br />-
+                대표번호 : 054-750-5000<br /> <a
+                  href="http://www.komac.re.kr/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="12">
+              <td>한국건설기술연구원</td>
+              <td>하천실험센터</td>
+              <td>2009</td>
+              <td>
+                - 주소 : 경상북도 안동시 남후면 아곡길 942<br />- 대표번호 :
+                054-843-1812
+              </td>
+            </tr>
+            <tr data-index="12">
+              <td>한국지질자원연구원</td>
+              <td>포항지질자원실증연구센터</td>
+              <td>2016</td>
+              <td>
+                - 주소 : 경북 포항시 북구 흥해읍 영일만대로 905<br />- 대표번호
+                : 054-245-3700
+              </td>
+            </tr>
+
+            <!-- 13: 경남 -->
+            <tr data-index="13">
+              <td>한국기계연구원</td>
+              <td>LNG ∙극저온기계<br />기술시험인증센터</td>
+              <td>2013</td>
+              <td>
+                - 주소 : 경상남도 김해시 주촌면 골든루트로 80-140번지<br />-
+                대표번호 : 055-326-9032<br /><span
+                  > 
+                  <a
+                    href="https://www.kimm.re.kr/sub010405"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+            <tr data-index="1">
+              <td>안전성평가연구소</td>
+              <td>경남분소</td>
+              <td>2012</td>
+              <td>
+                - 주소 : 경상남도 진주시 문산읍 제곡길 17<br />- 대표번호 :
+                055-750-3702
+              </td>
+            </tr>
+
+            <!-- 14:대구 -->
+            <tr data-index="14">
+              <td>한국기초과학지원연구원</td>
+              <td>대구센터</td>
+              <td>1992</td>
+              <td>
+                - 주소 : 대구광역시 북구 대학로 80 경북대학교내<br />- 대표번호
+                : 053-959-3404
+              </td>
+            </tr>
+            <tr data-index="14">
+              <td>한국과학기술정보연구원</td>
+              <td>대구경북지원</td>
+              <td>1978</td>
+              <td>
+                - 주소 : 대구광역시 북구 유통단지로 90<br />- 대표번호 :
+                053-601-5205~9
+              </td>
+            </tr>
+            <tr data-index="14">
+              <td>한국한의학연구원</td>
+              <td>한의기술응용센터</td>
+              <td>2015</td>
+              <td>
+                - 주소 : 대구시 동구 신서동 대구경북첨단의료복합단지 첨 2-2
+                블록<br />- 대표번호 : 053-940-3817<br /> 
+                <a
+                  href="https://www.kiom.re.kr/contents/siteMain.do?srch_mu_site=DBR"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="14">
+              <td>한국생산기술연구원</td>
+              <td>대경본부</td>
+              <td>2012</td>
+              <td>
+                - 주소 : 대구광역시 달성군 유가면 테크노순환로 320<br />-
+                대표번호 : 053-580-0114<br /> 
+                <a
+                  href="http://www.kitech.re.kr/introduction/page4-6.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="14">
+              <td>한국전자통신연구원</td>
+              <td>대경권연구센터</td>
+              <td>2006</td>
+              <td>
+                - 주소 : 대구광역시 달성군 유가면 테크노순환로 10길1<br />-
+                대표번호 : 053&ndash;670-8000<br /><span
+                  > 
+                  <a
+                    href="https://www.etri.re.kr/kor/sub6/sub6_0101.etri?departCode=69"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+            <tr data-index="14">
+              <td>한국기계연구원</td>
+              <td>대구융합기술연구센터</td>
+              <td>2010</td>
+              <td>
+                - 주소 : 대구광역시 달성군 유가면 테크노순환로 330<br />-
+                대표번호 : 053-670-9056<br /><span
+                  > 
+                  <a
+                    href="https://www.kimm.re.kr/sub010701"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+
+            <!--15 : 울산  -->
+
+            <tr data-index="15">
+              <td>한국생산기술연구원</td>
+              <td>울산본부</td>
+              <td>2011</td>
+              <td>
+                - 주소 : 울산광역시 중구 종가로 55<br />- 대표번호 :
+                052-980-6600<br /> <a
+                  href="http://www.kitech.re.kr/introduction/page4-8.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="15">
+              <td>한국화학연구원</td>
+              <td>그린정밀화학연구센터</td>
+              <td>2012</td>
+              <td>- 주소 : 울산광역시 중구 종가로 45 (유곡동)</td>
+            </tr>
+            <tr data-index="15">
+              <td>한국화학연구원</td>
+              <td>바이오화학실용화센터</td>
+              <td>2016</td>
+              <td>- 주소 : 울산광역시 중구 종가로 406-30 (북정동)</td>
+            </tr>
+            <tr data-index="15">
+              <td>한국에너지기술연구원</td>
+              <td>울산차세대전지<br />연구개발센터</td>
+              <td>2019</td>
+              <td>
+                - 주소 : 울산광역시 남구 테크노산업로55번길 25(두왕동 762-3)<br />-
+                대표번호 : 052-702-2511
+              </td>
+            </tr>
+
+            <!-- 16 : 부산 -->
+
+            <tr data-index="16">
+              <td>한국기초과학지원연구원</td>
+              <td>부산센터</td>
+              <td>1992</td>
+              <td>
+                - 주소 : 부산광역시 강서구 과학산단1로 60번길 30<br />- 대표번호
+                : 051-974-6101~3
+              </td>
+            </tr>
+            <tr data-index="16">
+              <td>한국과학기술정보연구원</td>
+              <td>부산울산경남지원</td>
+              <td>1972</td>
+              <td>
+                - 주소 : 부산광역시 해운대구 센텀중앙로 79 센텀사이언스파크
+                4층<br />- 대표번호 : 051-831-0760
+              </td>
+            </tr>
+            <tr data-index="16">
+              <td>한국생산기술연구원</td>
+              <td>동남지역본부</td>
+              <td>2007</td>
+              <td>
+                - 주소 : 부산광역시 사상구 백양대로 804번길 42-7<br />- 대표번호
+                : 051-974-9250<br /> 
+                <a
+                  href="http://www.kitech.re.kr/introduction/page4-5.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="16">
+              <td>한국기계연구원</td>
+              <td>부산기계기술연구센터</td>
+              <td>2013</td>
+              <td>
+                - 주소 : 부산광역시 강서구 미음산단5로 41번길 48<br />- 대표번호
+                : 051-310-8100<br /><span
+                  > 
+                  <a
+                    href="https://www.kimm.re.kr/sub010801"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    title="홈페이지 새창 열기"
+                    class="btn type3 icon blank"
+                    >홈페이지 바로가기</a
+                  ></span
+                >
+              </td>
+            </tr>
+
+            <!-- 17: 제주 -->
+
+            <tr data-index="17">
+              <td>한국에너지기술연구원</td>
+              <td>제주글로벌연구센터</td>
+              <td>2011</td>
+              <td>
+                - 주소 : 제주도 제주시 구좌읍 해맞이해안로 200<br />- 대표번호 :
+                064-800-2301<br /> 
+                <a
+                  href="https://www.kier.re.kr/board?menuId=MENU00348"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+            <tr data-index="17">
+              <td>한국생산기술연구원</td>
+              79
+              <td>제주본부</td>
+              <td>2019</td>
+              <td>
+                - 주소: 제주특별자치도 제주시 제주대학로 102<br />- 대표번호:
+                064-754-1500<br /> 
+                <a
+                  href="https://www.kitech.re.kr/research/page3-10-0.php"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  title="홈페이지 새창 열기"
+                  class="btn type3 icon blank"
+                  >홈페이지 바로가기</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        var $tableTr = $(".table_box .table tbody tr"); //table 선택자
+        $mapBtn = $(".map_btn"); //map btn 선택자(all 버튼 포함)
+        $mapBtn
+          .on("click", function () {
+            //map 버튼을 클릭했을 때,
+            var $thisBtn = $(this), //선택한 버튼을 $this로 변수 저장
+              mapIndex = $thisBtn.attr("data-map"); //선택한 버튼의 data-map 속성을 변수로 저장
+            $mapBtn.attr("title", "열기").removeClass("active"); // 모든 map 버튼에 active 지우고
+            $thisBtn.addClass("active").attr("title", "닫기"); ///선택한 버튼의 active 추가
+            $tableTr.each(function () {
+              //table > tr 마다 아래 function을 작업해준다.
+              var $thisTr = $(this), // 반복문에서 해당 횟수의 tr을 $thisTr 변수로 저장
+                thisIndex = $thisTr.attr("data-index"); // 해당 횟수의 tr의 data-index 속성을 변수에 저장
+              if (mapIndex !== "all") {
+                // 선택한 버튼의 data-map 속성이 all이 아닐때,(all 버튼을 선택하지 않으면)
+                $thisTr.removeClass("active"); //우선 모든 tr의 active 클래스를 날린다.
+                if (mapIndex === thisIndex) {
+                  //선택버튼의 data-map과 tr의 data-index이 같다면
+                  $thisTr.addClass("active"); //같은 값이 있는 tr에 active클래스를 추가한다.
+                }
+              } else {
+                //all 버튼이라면,
+                $thisTr.addClass("active"); //모든 tr에 active를 준다.
+              }
+            });
+          })
+          .triggerHandler("click"); // 윈도우가 로딩될때 버튼중 맨 처음에 있는 놈을 클릭해준다.
+
+        /*
+어제 말했던 부분,
+- table이라는 껍데기는 그대로 사용한다.
+- 변경되는 부분(tr 내부의 데이터)는 버튼을 누를 때마다 변경해준다.
+
+그래서 변경한 부분:
+- 각 버튼에 data-map 이라는 속성을 추가해서 각 버튼의 넘버를 달아주었다.
+- table에서 중복된 부분을 하나로 사용해주기 위해 마크업에서 table을 하나만 남기고 다 지움
+- 각 테이블에서 중복되지 않는 tr 부분을 하나의 table 안에 몽땅 넣어주었다.
+- 그리고 tr 마다 data-index 속성을 추가하여 맵 버튼의 서울이 data-map="1"이라면, 서울에 해당되는 tr은 data-index="1" 이런 식으로 매칭했다.
+- css에서 tr에 active가 붙지 않은 선택자는 display:none 했다.
+ (.table_box .box table tr:not(.active) {display: none;})
+- triggerHandler로 맨 처음 버튼에 로딩하자마자 클릭된 것처럼 보이게 했다.
+
+
+
+개선 가능한 부분 : 
+- 버튼의 data-map, tr의 data-index는 '서울','부산' 처럼 글자를 넣어도 좋겠다. 구별이 쉬울 듯.
+
+
+공부할 부분 : 
+- title 속성 체크해 볼 것!
+- data-* 어떻게 쓰는지 공부해 볼 것!
+
+
+** 참고로 마크업이 줄었지만 줄이 늘어난 이유는 내가 쓰는 prettier라는 부가기능 때문입니닷!
+*/
+
+        // $(".table_box .table").each(function () {
+        //   var thisTbody = $(this).find("tbody").html(); //tbody부분을 html로 정의해 주고 each로 .box에 있는 모든 테이블들의 tbody html 부분을 var를 써서 thisTbody로 담아줫음
+        //   $(".table_all_box .table tbody").append(thisTbody); //.append 선택된 요소의 마지막에 새로운 요소나 콘텐츠를 추가
+        // });
+
+        // $(".map_datasets .map_btn").on("click", function () {
+        //   var thisIdx = $(this).index(); //순서대로
+        //   $(this).addClass("active").siblings().removeClass("active");
+        //   $(".table_box .box")
+        //     .eq(thisIdx)
+        //     .addClass("active")
+        //     .siblings()
+        //     .removeClass("active");
+        //   $(".table_all_box").removeClass("active");
+        // });
+
+        // $(".map_all").on("click", function () {
+        //   $(".map_datasets .map_btn").removeClass("active");
+        //   $(".table_box .box").removeClass("active");
+        //   $(".table_all_box").addClass("active");
+        // });
+      });
+    </script>
+  </body>
+</html>

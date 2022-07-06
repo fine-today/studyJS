@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+html,
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+blockquote,
+pre,
+button,
+fieldset,
+form,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+iframe,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+header,
+footer,
+main,
+menu,
+nav,
+section,
+summary,
+audio,
+video,
+template {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+img {
+  border: none;
+}
+img,
+video,
+audio {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+em,
+dfn,
+cite,
+address,
+i {
+  font-style: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+ol {
+  overflow: hidden;
+  position: relative;
+  counter-reset: number;
+}
+ol > li {
+  counter-increment: number;
+}
+ol > li:before {
+  content: counter(number, decimal);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 3px;
+  color: transparent;
+  line-height: 0;
+  text-indent: 100%;
+}
+legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 3px;
+  color: transparent;
+  line-height: 0;
+}
+fieldset {
+  border: none;
+  min-width: 0;
+}
+hr {
+  overflow: hidden;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+strong {
+  font-weight: 600;
+}
+
+.clearfix {
+  display: block;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.skip {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 0;
+  color: transparent;
+  line-height: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* 입력 form */
+input {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  vertical-align: middle;
+}
+input[type="file"] {
+  border: none;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+}
+button {
+  text-transform: none;
+  vertical-align: middle;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+select {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  text-transform: none;
+  vertical-align: middle;
+}
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  vertical-align: middle;
+  resize: none;
+}
+input[disabled="disabled"] {
+  background-color: #ebebeb;
+  color: #959595;
+}
+select[disabled="disabled"] {
+  background-color: #ebebeb;
+  color: transparent;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: none;
+}
+
+/*가상선택자*/
+:before,
+:after {
+}
+
+/* 속성사용 클래스 */
+.align_left {
+  text-align: left;
+}
+.align_center {
+  text-align: center;
+}
+.align_right {
+  text-align: right;
+}
+.align_top {
+  vertical-align: top;
+}
+.align_middle {
+  vertical-align: middle;
+}
+.align_bottom {
+  vertical-align: bottom;
+}
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.ir {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+  line-height: 0;
+}
+.img_wrap {
+  font-size: 0;
+  line-height: 0;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.web_show {
+  display: block;
+}
+.mobile_show {
+  display: none;
+}

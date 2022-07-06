@@ -1,0 +1,201 @@
+#container {
+  position: relative;
+  font-family: "Gmarket";
+}
+.header_popup {
+  position: relative;
+}
+.header_popup .popup_cell {
+  width: 100%;
+  height: 80px;
+  background: url(../images/main/header_popup1.jpg) no-repeat center top;
+  background-size: cover;
+  text-align: center;
+  line-height: 80px;
+}
+.header_popup .popup_cell .text,
+.header_popup .popup_cell a {
+  display: inline-block;
+  line-height: 1.3;
+  vertical-align: middle;
+}
+.header_popup .popup_cell .text {
+  margin-right: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+.header_popup .popup_cell a {
+  width: 229px;
+  height: 37px;
+  border-radius: 60px;
+  background-color: #907b40;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 37px;
+}
+
+/* container */
+
+.main {
+  background-color:#ddd;
+}
+
+.main section {
+  font-size: 0;
+  line-height: 0;
+}
+
+section.visual {
+background-color:#888;
+}
+
+.visual .visual_slide {
+  position:relative;
+}
+.visual .visual_list {}
+.visual .visual_item {
+  position:relative;
+  width:100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.visual .visual_item .visual_anchor {
+  display:block;
+  width:100%;
+  height:100%;
+}
+.visual .visual_ctrl {
+  position:absolute;
+  left:0;
+  width:100%;
+  height:0;
+  top:50%;
+}
+.visual .visual_ctrl button {
+  position:absolute;
+  top:-35px;
+  width:70px;
+  height:70px;
+}
+
+.visual .visual_ctrl button.prev {
+  left:0;
+}
+
+.visual .visual_ctrl button.next {
+  right:0;
+}
+
+section.recommend {
+}
+.recommend h2 {
+}
+.recommend .tab_nav {
+}
+.recommend .tab_nav .tab_btn {
+}
+.recommend .tab_con {
+}
+.recommend .tab_con_list {
+}
+.recommend .tab_con_item {
+}
+.recommend .tab_con_item .tab_con_anchor {
+}
+.recommend .tab_con_item .img {
+}
+.recommend .tab_con_item .con {
+}
+.recommend .tab_con_item .con h3 {
+}
+.recommend .tab_con_item .con p {
+}
+.recommend {
+}
+
+section.estimate {
+}
+.estimate {
+}
+.estimate .title_wrap {
+}
+.estimate .title_wrap h2 {
+}
+.estimate .title_wrap p {
+}
+.estimate .title_wrap .more {
+}
+
+.estimate .estimate_slide {
+}
+.estimate .estimate_list {
+}
+.estimate .estimate_item {
+}
+.estimate .estimate_btn {
+}
+.estimate .estimate_ctrl {
+}
+.estimate .estimate_ctrl .dots {
+}
+
+.estimate .estimate2_slide {
+}
+.estimate .estimate2_list {
+}
+.estimate .estimate2_item {
+}
+
+section.ask {
+}
+.ask {
+}
+.ask .title_wrap {
+}
+.ask .title_wrap h2 {
+}
+.ask .title_wrap h2 em {
+}
+.ask .title_wrap p {
+}
+.ask .title_wrap .more {
+}
+
+section.new {
+}
+.new {
+}
+.new h2 {
+}
+.new .new_list {
+}
+.new .new_item {
+}
+.new .new_item .new_anchor {
+}
+.new .new_item .img {
+}
+.new .new_item .con {
+}
+.new .new_item .con h3 {
+}
+.new .new_item .con p {
+}
+
+section.info {
+}
+.info {
+}
+.info .info_list {
+}
+.info .info_item {
+}
+.info h3 {
+}
+.info p {
+}
+.info .more {
+}

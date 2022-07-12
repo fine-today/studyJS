@@ -37,6 +37,15 @@ MongoClient.connect(mongoAddress, function (error, client) {
       }
     );
   });
+  app.delete("/delete", function (req, res) {
+    console.log(req.body);
+    db.collection("post").deleteOne(
+      { _id: parseInt(요청.body) },
+      function (error, result) {
+        console.log("삭제완료");
+      }
+    );
+  });
 });
 var db;
 

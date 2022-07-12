@@ -58,16 +58,8 @@
         </form>
       </div>
     </nav>
-    <h4>서버에서 할일 가져오기</h4>
-    <ul class="list-group">
-      <% for(var i = 0;i < posts.length;i++){ %>
-      <li class="list-group-item" aria-disabled="true">
-        <p>글번호 : <%= posts[i]._id %></p>
-        <h4><%= posts[i].title %></h4>
-        <p><%= posts[i].date %></p>
-      </li>
-      <% } %>
-    </ul>
+
+    <h4>상세 페이지</h4>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>

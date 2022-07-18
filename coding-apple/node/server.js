@@ -6,9 +6,11 @@ app.set("view engine", "ejs");
 
 const MongoClient = require("mongodb").MongoClient;
 const mongoAddress =
-  "mongodb+srv://hanshin:hanshin@atlascluster.vpb5laj.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://hanshin:hanshin!23@atlascluster.vpb5laj.mongodb.net/?retryWrites=true&w=majority";
+
+var db;
 MongoClient.connect(mongoAddress, function (error, client) {
-  if (error) return console.log("서버 열림");
+  if (error) return console.log("error?");
   db = client.db("todoapp");
 
   app.post("/add", function (req, res) {
@@ -26,8 +28,8 @@ MongoClient.connect(mongoAddress, function (error, client) {
             db.collection("count").updateOne(
               { title: "boardCount" },
               { $inc: { totalPost: 1 } },
-              function (err2, result3) {
-                if (err2) {
+              function (err3, result3) {
+                if (err3) {
                   return console.log(err);
                 }
               }
@@ -37,26 +39,16 @@ MongoClient.connect(mongoAddress, function (error, client) {
       }
     );
   });
-  app.delete("/delete", function (req, res) {
-    console.log(req.body);
-    db.collection("post").deleteOne(
-      { _id: parseInt(요청.body) },
-      function (error, result) {
-        console.log("삭제완료");
-      }
-    );
-  });
 });
-var db;
 
 app.listen(8080, function () {});
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index.ejs");
 });
 
 app.get("/write", function (req, res) {
-  res.sendFile(__dirname + "/write.html");
+  res.render("write.ejs");
 });
 
 app.get("/list", function (req, res) {

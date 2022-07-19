@@ -6,7 +6,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 function TimeTableCell({ day, timeNum, Edit }) {
-  const [timeTableData, setTimeTableData] = useRecoilState(timeTableState);
+  const [timeTableData] = useRecoilState(timeTableState);
   const [hover, setHover] = useState(false);
   const timeData = useMemo(() => {
     return timeTableData[day].find(

@@ -63,6 +63,7 @@ function InputModal({
     lectureNameData,
     colorData,
     idNum,
+    reset,
   ]);
   const [timeTableData, settimeTableData] = useRecoilState(timeTableState);
   const Submit = useCallback(
@@ -150,6 +151,7 @@ function InputModal({
     [dayData, handleClose, idNum, settimeTableData, timeTableData]
   );
 
+  // return 시작
   return (
     <Dialog open={showModal} onClose={handleClose}>
       <form onSubmit={handleSubmit(idNum ? Edit : Submit)}>

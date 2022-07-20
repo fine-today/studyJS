@@ -1,44 +1,113 @@
 var http = require("http");
 var fs = require("fs");
 var url = require("url");
+var qs = require("querystring");
 
 var app = http.createServer(function (request, response) {
   var _url = request.url;
   var queryData = url.parse(_url, true).query;
+  var pathname = url.parse(_url, true).pathname;
   var title = queryData.id;
+  var template = null;
 
-  console.log(queryData.id);
-  if (_url == "/") {
-    // _url = "/index.html";
-    title = "welcome!!";
+  if (pathname === "/") {
+    if (queryData.id) {
+      fs.readFile(`data/${queryData.id}`, "utf-8", function (err, description) {
+        fs.readdir("./data", function (error, filelist) {
+          var list = "<ul>";
+          filelist.map(
+            (x) => (list += `<li><a href="/?id=${x}">${x}</a></li>`)
+          );
+          list += "</ul>";
+          var template = `
+            <!doctype html>
+            <html>
+            <head>
+                <title>WEB2 - ${title}</title>
+                <meta charset="utf-8">
+            </head>
+            <body>
+                <h1><a href="/">WEB</a></h1>
+                ${list}
+                <a href="/create">create</a>
+                <h2>${title}</h2>
+              <p>${description}</p>
+            </body>
+            </html>
+            `;
+          response.writeHead(200);
+          response.end(template);
+        });
+      });
+    } else {
+      title = "Welcome";
+      description = "Hello, Node.js";
+      fs.readdir("./data", function (error, filelist) {
+        var list = "<ul>";
+        filelist.map((x) => (list += `<li><a href="/?id=${x}">${x}</a></li>`));
+        list += "</ul>";
+        var template = `
+            <!doctype html>
+            <html>
+            <head>
+                <title>WEB2 - ${title}</title>
+                <meta charset="utf-8">
+            </head>
+            <body>
+                <h1><a href="/">WEB</a></h1>
+                ${list}
+                <a href="/create">create</a>
+                <h2>${title}</h2>
+              <p>${description}</p>
+            </body>
+            </html>
+            `;
+        response.writeHead(200);
+        response.end(template);
+      });
+    }
+  } else if (pathname === "/create") {
+    fs.readdir("./data", function (error, filelist) {
+      title = "WEB - create";
+      var template = `
+      <!doctype html>
+      <html>
+      <head>
+          <title>${title}</title>
+          <meta charset="utf-8">
+      </head>
+      <body>
+      <form action="http://localhost:3000/create_process" method="post">
+      <p><input type="text" name="title" placeholder="title"></p>
+      <p>
+        <textarea name="description" placeholder="description"></textarea>
+      </p>
+      <p><input type="submit"></>
+        
+      </form>
+      </body>
+      </html>
+      `;
+      response.writeHead(200);
+      response.end(template);
+    });
+  } else if (pathname === "/create_process") {
+    var body = "";
+    request.on("data", function (data) {
+      body += data;
+    });
+    console.log(body);
+    request.on("end", function () {
+      var post = qs.parse(body);
+      var title = post.title;
+      var template = null;
+      var description = post.description;
+      console.log(post);
+    });
+    response.writeHead(200);
+  } else {
+    response.writeHead(404);
+    response.end("Not Found");
   }
-  if (_url == "/favicon.ico") {
-    return response.writeHead(404);
-  }
-  response.writeHead(200);
-  var template = `
-  <!doctype html>
-<html>
-<head>
-  <title>WEB1 - ${title}</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1><a href="/">WEB</a></h1>
-  <ol>
-    <li><a href="/?id=HTML">HTML</a></li>
-    <li><a href="/?id=CSS">CSS</a></li>
-    <li><a href="/?id=JavaScript">JavaScript</a></li>
-  </ol>
-  <h2>${title}</h2>
-  <p><a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 speicification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and web applications.Web browsers receive HTML documents from a web server or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
-  <img src="coding.jpg" width="100%">
-  </p><p style="margin-top:45px;">HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets.
-  </p>
-</body>
-</html>
-
-  `;
-  response.end(template);
 });
-app.listen(3001);
+app.listen(3002);
